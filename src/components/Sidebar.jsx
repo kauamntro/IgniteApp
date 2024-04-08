@@ -2,7 +2,7 @@ import { Avatar } from './Avatar'
 import styles from './Sidebar.module.css'
 import { PencilLine } from 'phosphor-react'
 
-export function Sidebar() {
+export function Sidebar({ setContent, postBoolean }) {
     return (
         <aside className={styles.sidebar}>
             <img 
@@ -19,10 +19,15 @@ export function Sidebar() {
             </div>
 
             <footer>
-                <a href="#">
-                    <PencilLine size={20} />
-                    Editar seu perfil
-                </a>
+                <button className={styles.button} onClick={setContent}>
+                {postBoolean === false ? (
+                <>
+                    <PencilLine size={20} /> Novo Post
+                </>
+                ) : (
+                <>Voltar ao início</>
+                )}
+                </button>
             </footer>
         </aside>
     )

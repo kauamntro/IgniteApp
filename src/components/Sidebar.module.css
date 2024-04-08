@@ -35,12 +35,13 @@
     padding: 1.5rem 2rem 2rem;
 }
 
-.sidebar footer a{
+.button{
     background: transparent;
     color: var(--green-500);
     border: 1px solid var(--green-500);
     border-radius: 8px;
     height: 50px;
+    width: 195px;
     padding: 0 1.5rem;
     font-weight: bold;
     display: block;
@@ -55,7 +56,7 @@
     transition: color 0.1s, background-color 0.1s;
 }
 
-.sidebar footer a:hover{
+.button:hover{
     background-color: var(--green-500);
     color: var(--white);
 }
